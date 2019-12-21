@@ -144,10 +144,11 @@ class QiniuPlugin {
 
         return async () => {
           const key = path.posix.join(this.options.uploadPath, filename);
-
+          reporter.log = `${key}`;
+          const localFile = path.posix.join(compilation.outputOptions.path,filename);
           reporter.text = `🚀  正在上传第 ${index + 1} 个文件: ${key}`;
-          
-          return await this.qiniu.putFile(key, file.existsAt);
+          // return await this.qiniu.putFile(key, file.existsAt);
+          return await this.qiniu.putFile(key, localFile);
         }
       });
       
