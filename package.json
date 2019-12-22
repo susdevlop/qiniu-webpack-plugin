@@ -1,6 +1,6 @@
 {
   "name": "better-qiniu-webpack-plugin-changed",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Webpack 编译后的文件上传到 七牛云存储,(自用小修改)",
   "main": "src/index.js",
   "scripts": {
